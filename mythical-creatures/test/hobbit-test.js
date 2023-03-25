@@ -149,7 +149,6 @@ describe('Hobbit', function() {
 
     var friends = findFriends(socialBilbo)
 
-    // console.log(friends)
 
     assert.equal(friends.length, 2);
     assert.equal(friends[0], "Foster");

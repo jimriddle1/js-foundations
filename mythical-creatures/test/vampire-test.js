@@ -72,12 +72,8 @@ describe('Vampire', function() {
     // var drank6xsVamp = drink(drank5xsVamp);
 
 
-    console.log(drank5xsVamp.thirsty)
-    console.log(drank5xsVamp.ouncesDrank)
-
-
-    // assert.equal(drank5xsVamp.ouncesDrank, 50);
-    // assert.equal(drank5xsVamp.thirsty, false);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
   });
 
   it('should not drink more ounces when not thirsty', function() {
@@ -133,7 +129,7 @@ describe('Vampire', function() {
   });
 
   //Spicy
-  it.skip('should be able to find the vampires with bats', function() {
+  it('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
     var brittany = createVampire('Brittany');
     var jeff = createVampire('Jeff', 'fox');

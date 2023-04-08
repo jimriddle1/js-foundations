@@ -2,12 +2,32 @@ var assert = require('chai').assert;
 var { createAirport, welcomeGuests, landPlanes, checkAirlineLocations } = require('./airport');
 
 describe('Airport', function() {
+  it('should create a dummy test', function() {
+    var airport = 1234;
+
+    assert.equal(airport, 1234);
+   
+  });
   it('should create an airport', function() {
     var airport = createAirport('Denver International Airport', ['United', 'Southwest', 'Delta'], 144);
 
     assert.equal(airport.name, 'Denver International Airport');
     assert.equal(airport.availableGates, 144);
     assert.equal(airport.airlines[0], 'United');
+  });
+
+  it('should create an airport and have different names for different airports', function(){
+    var airport_1 = createAirport("O'hare", ['abc', 'def'], 120)
+    var airport_2 = createAirport("Midway", ['hij', 'klm'], 190)
+
+    assert.equal(airport_1.name, "O'hare");
+    assert.equal(airport_1.availableGates, 120);
+    assert.equal(airport_1.airlines[0], 'abc');
+
+    assert.equal(airport_2.name, "Midway");
+    assert.equal(airport_2.availableGates, 190);
+    assert.equal(airport_2.airlines[1], 'klm');
+
   });
 
   it.skip('should welcome people to the airport', function() {
